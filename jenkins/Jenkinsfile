@@ -1,6 +1,6 @@
 pipeline {
     agent {
-         {label 'slave && debian'}
+        label 'slave && debian'
     }
     stages {
         stage('Build') {
