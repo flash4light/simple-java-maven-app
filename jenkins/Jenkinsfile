@@ -34,7 +34,7 @@ pipeline {
                             verbose: true,
                             transfers: [
                                 sshTransfer(execCommand: "/bin/rm -rf /opt/app/*"),
-                                sshTransfer(sourceFiles: "target/*.jar")
+                                sshTransfer(sourceFiles: "target/*.jar", removePrefix: "target",)
                             ]
                         )
                     ]
